@@ -1,23 +1,4 @@
-/**
-  ******************************************************************************
-  * @file    stm32f10x_i2c.c
-  * @author  MCD Application Team
-  * @version V3.5.0
-  * @date    11-March-2011
-  * @brief   This file provides all the I2C firmware functions.
-  ******************************************************************************
-  * @attention
-  *
-  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
-  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
-  * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
-  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
-  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
-  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
-  *
-  * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
-  ******************************************************************************
-  */
+
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_i2c.h"
@@ -1274,7 +1255,7 @@ ITStatus I2C_GetITStatus(I2C_TypeDef* I2Cx, uint32_t I2C_IT)
 }
 
 /**
-  * @brief  Clears the I2Cx’s interrupt pending bits.
+  * @brief  Clears the I2CxÂ’s interrupt pending bits.
   * @param  I2Cx: where x can be 1 or 2 to select the I2C peripheral.
   * @param  I2C_IT: specifies the interrupt pending bit to clear. 
   *   This parameter can be any combination of the following values:
@@ -1327,5 +1308,3 @@ void I2C_ClearITPendingBit(I2C_TypeDef* I2Cx, uint32_t I2C_IT)
 /**
   * @}
   */ 
-
-/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
