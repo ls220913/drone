@@ -1,25 +1,4 @@
-/**
-  ******************************************************************************
-  * @file    GPIO/IOToggle/stm32f10x_it.c 
-  * @author  MCD Application Team
-  * @version V3.5.0
-  * @date    08-April-2011
-  * @brief   Main Interrupt Service Routines.
-  *          This file provides template for all exceptions handler and peripherals
-  *          interrupt service routine.
-  ******************************************************************************
-  * @attention
-  *
-  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
-  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
-  * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
-  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
-  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
-  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
-  *
-  * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
-  ******************************************************************************
-  */
+
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
@@ -45,13 +24,13 @@
 /*            Cortex-M3 Processor Exceptions Handlers                         */
 /******************************************************************************/
 uint8_t Count_2ms,Count_10ms,Count_40ms,Count_250ms;
-void TIM3_IRQHandler(void)//Timer3中断
+void TIM3_IRQHandler(void)//Timer3涓柇
 {	
 	if(TIM3->SR & TIM_IT_Update)
 	{     
-		TIM3->SR = ~TIM_FLAG_Update;//清除中断标志
+		TIM3->SR = ~TIM_FLAG_Update;//娓呴櫎涓柇鏍囧織
 		
-		if( Bsp_Int_Ok == 0 )	return;//硬件未初始化完成，则返回
+		if( Bsp_Int_Ok == 0 )	return;//纭欢鏈垵濮嬪寲瀹屾垚锛屽垯杩斿洖
 		
 		Timer3_Count++;
 		Count_2ms++;
@@ -61,13 +40,13 @@ void TIM3_IRQHandler(void)//Timer3中断
 	}
 }
 
-void EXTI1_IRQHandler(void)//MODE按键中断
+void EXTI1_IRQHandler(void)//MODE鎸夐敭涓柇
 {	
 	static uint32_t Key_Delay=0;
 	if(EXTI_GetITStatus(EXTI_Line1) != RESET) 
 	{
 		EXTI_ClearITPendingBit(EXTI_Line1); 
-		if(Key_Delay<Timer3_Count-100)//消抖
+		if(Key_Delay<Timer3_Count-100)//娑堟姈
 		{
 			Key_Delay = Timer3_Count;
 			if(Mode)
@@ -78,13 +57,13 @@ void EXTI1_IRQHandler(void)//MODE按键中断
 	}
 }
 
-void EXTI9_5_IRQHandler(void)//FUN按键中断
+void EXTI9_5_IRQHandler(void)//FUN鎸夐敭涓柇
 {	
 	static uint32_t Key_Delay=0;
 	if(EXTI_GetITStatus(EXTI_Line9) != RESET) 
 	{
 		EXTI_ClearITPendingBit(EXTI_Line9);
-		if(Key_Delay<Timer3_Count-100)//消抖
+		if(Key_Delay<Timer3_Count-100)//娑堟姈
 		{
 			Key_Delay = Timer3_Count;
 			if(Fun)
@@ -95,7 +74,7 @@ void EXTI9_5_IRQHandler(void)//FUN按键中断
 	}
 }
 
-void EXTI15_10_IRQHandler(void)//Nrf2401中断
+void EXTI15_10_IRQHandler(void)//Nrf2401涓柇
 {	
 	if(EXTI_GetITStatus(EXTI_Line15) != RESET) 
 	{
@@ -225,4 +204,4 @@ void SysTick_Handler(void)
   * @}
   */
 
-/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+
