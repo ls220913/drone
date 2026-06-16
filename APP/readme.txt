@@ -63,6 +63,5 @@ In order to make the program work, you must do the following :
  - XL-density devices are STM32F101xx and STM32F103xx microcontrollers where
    the Flash memory density ranges between 512 and 1024 Kbytes.
  - Connectivity line devices are STM32F105xx and STM32F107xx microcontrollers.
-   
- * <h3><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h3>
+
  */
