@@ -1,12 +1,5 @@
 /**
-  ******************************************************************************
-  * @file    stm32f10x_adc.c
-  * @author  MCD Application Team
-  * @version V3.5.0
-  * @date    11-March-2011
-  * @brief   This file provides all the ADC firmware functions.
-  ******************************************************************************
-  * @attention
+
   *
   * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
   * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
@@ -1303,5 +1296,3 @@ void ADC_ClearITPendingBit(ADC_TypeDef* ADCx, uint16_t ADC_IT)
 /**
   * @}
   */
-
-/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
