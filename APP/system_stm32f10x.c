@@ -1,7 +1,6 @@
 /**
   ******************************************************************************
   * @file    GPIO/IOToggle/system_stm32f10x.c
-  * @author  MCD Application Team
   * @version V3.5.0
   * @date    08-April-2011
   * @brief   CMSIS Cortex-M3 Device Peripheral Access Layer System Source File.
@@ -1091,4 +1090,3 @@ static void SetSysClockTo72(void)
 /**
   * @}
   */    
-/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
