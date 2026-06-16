@@ -1,23 +1,4 @@
-/**
-  ******************************************************************************
-  * @file    stm32f10x_flash.c
-  * @author  MCD Application Team
-  * @version V3.5.0
-  * @date    11-March-2011
-  * @brief   This file provides all the FLASH firmware functions.
-  ******************************************************************************
-  * @attention
-  *
-  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
-  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
-  * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
-  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
-  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
-  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
-  *
-  * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
-  ******************************************************************************
-  */
+
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_flash.h"
@@ -1431,8 +1412,8 @@ FlagStatus FLASH_GetFlagStatus(uint32_t FLASH_FLAG)
 /**
   * @brief  Clears the FLASH's pending flags.
   * @note   This function can be used for all STM32F10x devices.
-  *         - For STM32F10X_XL devices, this function clears Bank1 or Bank2’s pending flags
-  *         - For other devices, it clears Bank1’s pending flags.
+  *         - For STM32F10X_XL devices, this function clears Bank1 or Bank2Â’s pending flags
+  *         - For other devices, it clears Bank1Â’s pending flags.
   * @param  FLASH_FLAG: specifies the FLASH flags to clear.
   *   This parameter can be any combination of the following values:         
   *     @arg FLASH_FLAG_PGERR: FLASH Program error flag       
@@ -1680,5 +1661,3 @@ FLASH_Status FLASH_WaitForLastBank2Operation(uint32_t Timeout)
 /**
   * @}
   */
-
-/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
